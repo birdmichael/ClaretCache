@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01213B7A22F0248A0012CC69 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01213B7922F0248A0012CC69 /* Transaction.swift */; };
+		016B5E5322EFE9E20029D97A /* Sentinel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016B5E5222EFE9E20029D97A /* Sentinel.swift */; };
+		016DCCDF22EFE93900333659 /* AsyncLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016DCCDE22EFE93900333659 /* AsyncLayer.swift */; };
+		01AD07EE22F01D3000E9EEFB /* DispatchQueue+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD07ED22F01D3000E9EEFB /* DispatchQueue+Extention.swift */; };
 		01C75DEC22E0723E00C7D03F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C75DEB22E0723E00C7D03F /* AppDelegate.swift */; };
 		01C75DEE22E0723E00C7D03F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C75DED22E0723E00C7D03F /* ViewController.swift */; };
 		01C75DF122E0723E00C7D03F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C75DEF22E0723E00C7D03F /* Main.storyboard */; };
@@ -29,6 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01213B7922F0248A0012CC69 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Transaction.swift; path = ../../../../../../../System/Volumes/Data/Users/birdmichael/Documents/GitHub/ClaretCache/Sources/ClaretCache/Transaction.swift; sourceTree = "<group>"; };
+		016B5E5222EFE9E20029D97A /* Sentinel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Sentinel.swift; path = ../../../../../../../System/Volumes/Data/Users/birdmichael/Documents/GitHub/ClaretCache/Sources/ClaretCache/Sentinel.swift; sourceTree = "<group>"; };
+		016DCCDE22EFE93900333659 /* AsyncLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AsyncLayer.swift; path = ../../../../../../../System/Volumes/Data/Users/birdmichael/Documents/GitHub/ClaretCache/Sources/ClaretCache/AsyncLayer.swift; sourceTree = "<group>"; };
+		01AD07ED22F01D3000E9EEFB /* DispatchQueue+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Extention.swift"; path = "../../../../../../../System/Volumes/Data/Users/birdmichael/Documents/GitHub/ClaretCache/Sources/ClaretCache/DispatchQueue+Extention.swift"; sourceTree = "<group>"; };
 		01C75DE822E0723E00C7D03F /* ClaretCacheDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClaretCacheDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C75DEB22E0723E00C7D03F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01C75DED22E0723E00C7D03F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +120,10 @@
 			children = (
 				01FA686B22E719DB008E24FC /* MemoryCache.swift */,
 				01FA686C22E719DB008E24FC /* ClaretCache.swift */,
+				016DCCDE22EFE93900333659 /* AsyncLayer.swift */,
+				016B5E5222EFE9E20029D97A /* Sentinel.swift */,
+				01AD07ED22F01D3000E9EEFB /* DispatchQueue+Extention.swift */,
+				01213B7922F0248A0012CC69 /* Transaction.swift */,
 			);
 			path = ClaretCache;
 			sourceTree = "<group>";
@@ -311,10 +323,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				016DCCDF22EFE93900333659 /* AsyncLayer.swift in Sources */,
+				01AD07EE22F01D3000E9EEFB /* DispatchQueue+Extention.swift in Sources */,
+				01213B7A22F0248A0012CC69 /* Transaction.swift in Sources */,
 				01FA686D22E719DB008E24FC /* MemoryCache.swift in Sources */,
 				01C75DEE22E0723E00C7D03F /* ViewController.swift in Sources */,
 				01C75DEC22E0723E00C7D03F /* AppDelegate.swift in Sources */,
 				01FA686E22E719DB008E24FC /* ClaretCache.swift in Sources */,
+				016B5E5322EFE9E20029D97A /* Sentinel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
