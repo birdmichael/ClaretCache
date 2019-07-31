@@ -8,32 +8,33 @@
 
 import Foundation
 
-class Transaction <T> where T: NSObject {
+class Transaction <T> where T: NSObjectProtocol {
 
-    var target: T?
-    var selector: Selector?
+    weak var target: T?
+    var selector: Selector
 
     init(transaction target: T,selector: Selector) {
         self.target = target
         self.selector = selector
     }
 
+
     func commit() {
-        guard target != nil && selector != nil else {
-            transactionSetup()
-            transactionSet?.insert(self as! Transaction<NSObject>)
-            return
-        }
+        transactionSetup()
+        transactionSet?.insert(self as! Transaction<NSObject>)
     }
 }
 
 extension Transaction: Hashable {
-    static func == (lhs: Transaction, rhs: Transaction) -> Bool {
-        return lhs.target == rhs.target && lhs.selector == rhs.selector
+    static func == (lhs: Transaction<T>, rhs: Transaction<T>) -> Bool {
+        guard let ltarget = lhs.target, let rtarget = rhs.target else { return false }
+        return ltarget.isEqual(rtarget) && lhs.selector == rhs.selector
     }
 
     func hash(into hasher: inout Hasher) {
-        hasher.combine(target)
+        if let target = target {
+            hasher.combine(target.hash)
+        }
         hasher.combine(selector)
     }
 }
@@ -53,7 +54,9 @@ private func transactionSetup() {
             let currentSet = transactionSet
             transactionSet = Set()
             for transaction in currentSet! {
-                _ = (transaction.target)?.perform(transaction.selector)
+                if let target = transaction.target {
+                    _ = target.perform(transaction.selector)
+                }
             }
         }
 
